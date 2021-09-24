@@ -4,7 +4,7 @@ pipeline {
     stage('Construyendo la App Web') {
       steps {
         echo 'Construyendo la App Web'
-        sh ' run_build_script.sh'
+        sh 'sh run_build_script.sh'
         slackSend(color: 'good', message: 'Se construyo la App de forma exitosa')
       }
     }
